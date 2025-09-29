@@ -51,7 +51,7 @@
             <h1 class="title is-1 publication-title is-bold">
               <span class="has-text-primary"><i class="fa-solid fa-language"></i> DiscoX</span>: Benchmarking Discourse-Level Translation task in Expert Domains
             </h1>
-            <p class="subtitle is-11 publication-subtitle">
+            <p class="subtitle is-14 publication-subtitle">
               DiscoX Bench focuses on 200 Chinese and English texts, each over 1,500 words, covering genres such as news, academic papers, and literary works. It evaluates the performance of large models in discourse-level translation from three dimensions: Accuracy, Fluency, and Appropriateness, providing guidance for model iteration.
             </p>
             
@@ -441,59 +441,67 @@
           <div class="content">
             <p class="has-text-left mb-3">DiscoX Bench invited a total of over 130 Vertical Domain experts from various fields (including experts with more than 3 years of professional experience and master's/doctoral students from world-class Universities to construct the evaluation dataset. The texts in the dataset are required to be over 1,500 words, sourced from real-world industry and academic scenarios. They are logically coherent and of high quality, designed to challenge the upper limits of current large models' translation capabilities.</p>
             
-            <!-- Data Distribution Table -->
-            <div class="table-container mb-4" style="overflow-x: auto; border: 1px solid #dbdbdb; border-radius: 4px;">
-              <table class="table is-fullwidth is-striped is-hoverable" style="margin-bottom: 0;">
-                <thead>
-                  <tr class="has-background-light">
-                    <th class="has-text-black" style="font-weight: bold;">Primary Category</th>
-                    <th class="has-text-black" style="font-weight: bold;">Secondary Category</th>
-                    <th class="has-text-black" style="font-weight: bold;">Count</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td rowspan="4" style="vertical-align: middle; font-weight: bold;">Academic Papers</td>
-                    <td>Social Science Papers</td>
-                    <td><strong>38</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Natural Science Papers</td>
-                    <td><strong>35</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Humanities Papers</td>
-                    <td><strong>28</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Applied Science Papers</td>
-                    <td><strong>20</strong></td>
-                  </tr>
-                  <tr>
-                    <td rowspan="3" style="vertical-align: middle; font-weight: bold;">Non-academic Tasks</td>
-                    <td>News and Information</td>
-                    <td><strong>37</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Domain-Specific Scenarios</td>
-                    <td><strong>28</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Literature and Arts</td>
-                    <td><strong>14</strong></td>
-                  </tr>
-                  <tr class="has-background-light">
-                    <td colspan="2" style="font-weight: bold; text-align: center;"><strong>Total</strong></td>
-                    <td style="font-weight: bold;"><strong>200</strong></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            
-            <div class="has-text-centered mt-5">
-              <!-- Data distribution chart -->
-              <div style="width: 60%; margin: 0 auto;">
-                <img src="figure/distrubtion.png" alt="Data Distribution Chart" class="zoomable-image" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); cursor: pointer;">
+            <!-- Data Distribution Table and Chart - Side by Side Layout -->
+            <div class="columns is-variable is-6">
+              <!-- Left Column: Table -->
+              <div class="column is-half">
+                <div class="table-container mb-4" style="overflow-x: auto; border: 1px solid #dbdbdb; border-radius: 4px;">
+                  <table class="table is-fullwidth is-striped is-hoverable" style="margin-bottom: 0;">
+                    <thead>
+                      <tr class="has-background-light">
+                        <th class="has-text-black" style="font-weight: bold;">Primary Category</th>
+                        <th class="has-text-black" style="font-weight: bold;">Secondary Category</th>
+                        <th class="has-text-black" style="font-weight: bold;">Count</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td rowspan="4" style="vertical-align: middle; font-weight: bold;">Academic Papers</td>
+                        <td>Social Science Papers</td>
+                        <td><strong>38</strong></td>
+                      </tr>
+                      <tr>
+                        <td>Natural Science Papers</td>
+                        <td><strong>35</strong></td>
+                      </tr>
+                      <tr>
+                        <td>Humanities Papers</td>
+                        <td><strong>28</strong></td>
+                      </tr>
+                      <tr>
+                        <td>Applied Science Papers</td>
+                        <td><strong>20</strong></td>
+                      </tr>
+                      <tr>
+                        <td rowspan="3" style="vertical-align: middle; font-weight: bold;">Non-academic Tasks</td>
+                        <td>News and Information</td>
+                        <td><strong>37</strong></td>
+                      </tr>
+                      <tr>
+                        <td>Domain-Specific Scenarios</td>
+                        <td><strong>28</strong></td>
+                      </tr>
+                      <tr>
+                        <td>Literature and Arts</td>
+                        <td><strong>14</strong></td>
+                      </tr>
+                      <tr class="has-background-light">
+                        <td colspan="2" style="font-weight: bold; text-align: center;"><strong>Total</strong></td>
+                        <td style="font-weight: bold;"><strong>200</strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+              <!-- Right Column: Chart -->
+              <div class="column is-half">
+                <div class="has-text-centered" style="height: 100%; display: flex; align-items: center; justify-content: center;">
+                  <!-- Data distribution chart -->
+                  <div style="width: 90%; max-width: 400px;">
+                    <img src="figure/distrubtion.png" alt="Data Distribution Chart" class="zoomable-image" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); cursor: pointer;">
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -715,7 +723,7 @@
               <div class="card case-card">
                 <div class="card-content">
                   <div class="card-main-content">
-                    <h4 class="title is-5 has-text-primary mb-2">Judge Output</h4>
+                    <h4 class="title is-5 has-text-primary mb-2">Accuracy and Fluency Problems</h4>
                     <div class="content mb-2">
                       <p class="has-text-grey-dark">Excerpt from evaluation analysis identifying translation issues and accuracy problems...</p>
                     </div>
@@ -829,7 +837,7 @@
                   <thead>
                     <tr>
                       <th>Metric</th>
-                      <th>Overall Avg.</th>
+                      <th>Avg.</th>
                       <th colspan="2">System Level</th>
                       <th colspan="2">Segment Level</th>
                     </tr>

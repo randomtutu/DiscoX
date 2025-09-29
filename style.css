@@ -1056,6 +1056,7 @@ div {
   opacity: 0.95;
   margin-bottom: 2rem;
   font-family: 'Google Sans', sans-serif;
+  font-size: 1.2rem !important; /* 稍微小一点的字号 */
 }
 
 /* Publication Links */
@@ -1381,6 +1382,26 @@ div {
 /* Override Bulma's has-text-primary class to use our custom color */
 .has-text-primary {
   color: #22a2c3 !important;
+}
+
+/* Responsive layout for data distribution section */
+@media screen and (max-width: 768px) {
+  .columns.is-variable.is-6 {
+    display: block !important;
+  }
+  
+  .columns.is-variable.is-6 .column {
+    width: 100% !important;
+    margin-bottom: 2rem;
+  }
+  
+  .table-container {
+    font-size: 0.9rem;
+  }
+  
+  .table th, .table td {
+    padding: 0.5rem !important;
+  }
 }
 
 /* MARS-Bench Model Labels */

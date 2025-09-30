@@ -560,6 +560,22 @@ div {
   align-items: stretch;
 }
 
+/* Override alignment for overview section to align cards at top */
+#overview .columns.is-centered {
+  align-items: flex-start;
+}
+
+/* Reduce top padding for overview section */
+#overview.section {
+  padding-top: 1rem;
+}
+
+/* Reduce margin for inner card titles in overview */
+#overview .box .title.is-5 {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
 .column.is-one-third {
   display: flex;
   flex-direction: column;
@@ -611,7 +627,7 @@ div {
 
 /* Overview cards specific styling */
 #overview .box {
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -633,7 +649,7 @@ div {
   font-size: 1.4rem !important;
   font-weight: 700 !important;
   color: var(--primary-color) !important;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 0.8rem !important;
   text-align: center;
 }
 

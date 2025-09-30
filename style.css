@@ -998,17 +998,19 @@ div {
   color: #475569;
   border-bottom: 1px solid #f1f5f9;
   transition: all 0.2s ease;
+  text-align: center;
 }
 
-/* Style for percentage values */
+
 .table td:not(:first-child):not(:nth-child(2)) {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 500;
   font-size: 0.85rem;
+  text-align: center;
   color: #1e293b;
 }
 
-/* Style for model names (make them stand out) */
+
 .table td:nth-child(2) {
   font-weight: 600;
   color: #1e293b;
@@ -1027,6 +1029,11 @@ div {
 
 .table tr:hover td {
   color: #1e293b;
+}
+
+/* Ensure leaderboard numeric cells are centered */
+.leaderboard-wrapper .table tbody td {
+  text-align: center !important;
 }
 
 /* Medal Tags */
@@ -1367,32 +1374,7 @@ div {
   100% { background-position: 200% 0; }
 }
 
-/* Table Styles */
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  background: var(--background-white);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  font-family: 'Inter', sans-serif;
-}
-
-.table th,
-.table td {
-  padding: 1.2rem 1rem;
-  text-align: left;
-  border-bottom: 1px solid #f1f5f9;
-}
-
-.table th {
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-  font-weight: 600;
-  color: #334155;
-  font-size: 0.875rem;
-  letter-spacing: 0.025em;
-  border-bottom: 2px solid #e2e8f0;
-}
+/* Table Styles (duplicate rules removed; using primary definitions above) */
 
 .table tbody tr:hover {
   background: rgba(59, 130, 246, 0.04);
@@ -1507,7 +1489,7 @@ div {
 /* Ensure both tables have the same column widths - Optimized */
 .leaderboard-header th,
 .leaderboard-body td {
-  text-align: left;
+  text-align: center;
   vertical-align: middle;
   padding: 0.5em 0.75em;
   white-space: nowrap;
@@ -1808,4 +1790,9 @@ div {
 #metric-s-validation table th,
 #metric-s-validation table td {
   font-family: 'Century Gothic', 'Apple Gothic', 'Microsoft YaHei', Arial, sans-serif !important;
+}
+/* Ensure Count column is centered in Overview data distribution table */
+#overview .table tbody td:last-child,
+.table-container .table tbody td:last-child {
+  text-align: center !important;
 }

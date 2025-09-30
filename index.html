@@ -8,7 +8,6 @@
   <title>DiscoX: Benchmarking Discourse-Level Translation task in Expert Domains</title>
   <meta name="description" content="DiscoX Bench focuses on 200 Chinese and English texts, each over 1,500 words, covering genres such as news, academic papers, and literary works.">
   <meta name="keywords" content="Discourse-Level Translation; Expert Domains; Benchmark; Chinese; English; Translation Quality">
-  
   <!-- Bulma CSS Framework - Optimized loading -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -52,9 +51,8 @@
               <span class="has-text-primary"><i class="fa-solid fa-language"></i> DiscoX</span>: Benchmarking Discourse-Level Translation task in Expert Domains
             </h1>
             <p class="subtitle publication-subtitle">
-              DiscoX Bench focuses on 200 Chinese and English texts, each over 1,500 words, covering genres such as news, academic papers, and literary works. It evaluates the performance of large models in discourse-level translation from three dimensions: Accuracy, Fluency, and Appropriateness, providing guidance for model iteration.
+              DiscoX Bench focuses on 200 Chinese and English texts, each over 1,500 words, covering genres such as news, academic papers, and literary works. It evaluates large models on discourse-level translation from three dimensions: Accuracy, Fluency, and Appropriateness, providing guidance for model iteration.
             </p>
-            
             <div class="publication-links"> 
                <!-- First row: Arxiv, HuggingFace Dataset, XpertPlatform -->
                 <div style="margin-bottom: 0.5rem;">
@@ -83,7 +81,6 @@
                      </a> 
                   </span>
                 </div>
-               
                <!-- Second row: Overview, Leaderboard, Data Construction, Key Findings -->
                <div>
                  <span class="link-block"> 
@@ -133,7 +130,6 @@
       </div>
     </div>
   </section>
-
   <!-- Performance Overview Section -->
   <section class="section">
     <div class="container is-max-desktop">
@@ -144,13 +140,12 @@
              <div style="width: 100%; display: flex; align-items: center; justify-content: center;">
                <img src="figure/leaderboard.png" alt="Model Performance Overview" class="zoomable-image" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); cursor: pointer;">
              </div>
-             <p class="image-caption" style="margin-top: 10px; font-size: 14px; color: #666; font-style: italic; margin-bottom: 0;">Model Performance Overview</p>
+             <p class="image-caption" style="margin-top: 10px; font-size: 18px; color: #666; font-style: italic; margin-bottom: 0;">Model Performance Overview</p>
            </div>
         </div>
       </div>
     </div>
   </section>
-
   <main>
     <div id="contentModal" class="modal">
       <div class="modal-content">
@@ -159,7 +154,6 @@
         <div id="modalContent" class="content"></div>
       </div>
     </div>
-    
     <!-- Modal for image zoom -->
     <div id="imageModal" class="modal">
       <div class="modal-content image-modal-content">
@@ -167,8 +161,6 @@
         <img id="zoomedImage" class="zoomed-image" src="" alt="Zoomed image">
       </div>
     </div>
-    
-    
     <!-- Leaderboard Section -->
     <section class="section" id="leaderboard">
       <div class="container">
@@ -176,139 +168,155 @@
           <div class="column is-full">
             <div class="box" style="padding: 1.5rem;">
               <h2 class="title is-3 has-text-centered has-text-black mb-4"><i class="fa-solid fa-trophy"></i> Performance Leaderboard</h2>
-              
               <!-- Overall Performance Table -->
               <h3 class="title is-5 mb-3"><i class="fa-solid fa-chart-bar"></i> Overall Performance (Total Score + Three Dimensions)</h3>
-              <div class="table-container" style="overflow-x: auto; max-height: 500px; overflow-y: auto; border: 1px solid #dbdbdb; border-radius: 4px; margin-bottom: 2rem;">
-                <table class="table is-fullwidth is-striped is-hoverable" style="margin-bottom: 0;">
-                  <thead>
-                     <tr class="has-background-light">
-                       <th class="has-text-black nowrap" style="min-width: 80px; font-weight: bold;">Rank</th>
-                       <th class="has-text-black" style="min-width: 200px; font-weight: bold;">Models</th>
-                       <th class="has-text-black" style="min-width: 100px; font-weight: bold;">Overall</th>
-                       <th class="has-text-black" style="min-width: 120px; font-weight: bold;">Accuracy</th>
-                       <th class="has-text-black" style="min-width: 130px; font-weight: bold;">Fluency</th>
-                       <th class="has-text-black" style="min-width: 140px; font-weight: bold;">Appropriateness</th>
-                       <th class="has-text-black" style="min-width: 120px; font-weight: bold;">Open-source</th>
-                     </tr>
-                   </thead>
-                  <tbody>
-                    <tr class="has-background-warning-light"><td class="has-text-black"><span class="tag is-warning is-small">👑 Expert</span></td><td class="has-text-black"><strong>Human Expert</strong></td><td class="has-text-black"><span class="tag is-success is-small">80.16</span></td><td class="has-text-black">49.80</td><td class="has-text-black">15.96</td><td class="has-text-black">14.40</td><td class="has-text-black">-</td></tr>
-                    <tr><td class="has-text-black"><span class="tag is-warning is-small">🥇 1</span></td><td class="has-text-black"><strong>GPT-5-high</strong></td><td class="has-text-black"><span class="tag is-success is-small">76.66</span></td><td class="has-text-black"><strong>48.65</strong></td><td class="has-text-black">15.21</td><td class="has-text-black"><strong>12.80</strong></td><td class="has-text-black">×</td></tr>
-                    <tr><td class="has-text-black"><span class="tag is-light is-small">🥈 2</span></td><td class="has-text-black"><strong>Gemini-2.5-Pro</strong></td><td class="has-text-black"><span class="tag is-info is-small">71.25</span></td><td class="has-text-black">46.68</td><td class="has-text-black">13.14</td><td class="has-text-black">11.43</td><td class="has-text-black">×</td></tr>
-                    <tr><td class="has-text-black"><span class="tag is-light is-small">🥉 3</span></td><td class="has-text-black"><strong>Qwen-3-235B</strong></td><td class="has-text-black"><span class="tag is-info is-small">59.66</span></td><td class="has-text-black">33.15</td><td class="has-text-black">14.96</td><td class="has-text-black">11.55</td><td class="has-text-black">×</td></tr>
-                    <tr><td class="has-text-black">4</td><td class="has-text-black">Kimi-K2</td><td class="has-text-black">55.80</td><td class="has-text-black">27.63</td><td class="has-text-black"><strong>16.44</strong></td><td class="has-text-black">11.73</td><td class="has-text-black">×</td></tr>
-                    <tr><td class="has-text-black">5</td><td class="has-text-black">o3-high</td><td class="has-text-black">55.57</td><td class="has-text-black">28.78</td><td class="has-text-black">15.79</td><td class="has-text-black">11.00</td><td class="has-text-black">×</td></tr>
-                    <tr><td class="has-text-black">6</td><td class="has-text-black">o4-mini-high</td><td class="has-text-black">55.09</td><td class="has-text-black">29.55</td><td class="has-text-black">14.29</td><td class="has-text-black">11.25</td><td class="has-text-black">×</td></tr>
-                    <tr><td class="has-text-black">7</td><td class="has-text-black">Claude-4</td><td class="has-text-black">54.03</td><td class="has-text-black">39.38</td><td class="has-text-black">5.98</td><td class="has-text-black">8.68</td><td class="has-text-black">×</td></tr>
-                    <tr><td class="has-text-black">8</td><td class="has-text-black">Claude-4-T</td><td class="has-text-black">53.53</td><td class="has-text-black">38.98</td><td class="has-text-black">5.47</td><td class="has-text-black">9.08</td><td class="has-text-black">×</td></tr>
-                    <tr><td class="has-text-black">9</td><td class="has-text-black">Qwen-3-235B-T</td><td class="has-text-black">49.97</td><td class="has-text-black">23.20</td><td class="has-text-black">15.54</td><td class="has-text-black">11.23</td><td class="has-text-black">×</td></tr>
-                    <tr><td class="has-text-black">10</td><td class="has-text-black">GPT-4.1</td><td class="has-text-black">49.65</td><td class="has-text-black">29.25</td><td class="has-text-black">11.05</td><td class="has-text-black">9.35</td><td class="has-text-black">×</td></tr>
-                    <tr><td class="has-text-black">11</td><td class="has-text-black">DeepSeek-V3</td><td class="has-text-black">49.60</td><td class="has-text-black">22.80</td><td class="has-text-black">16.20</td><td class="has-text-black">10.60</td><td class="has-text-black">✓</td></tr>
-                    <tr><td class="has-text-black">12</td><td class="has-text-black">Doubao-1.6-T</td><td class="has-text-black">49.51</td><td class="has-text-black">29.30</td><td class="has-text-black">10.11</td><td class="has-text-black">10.10</td><td class="has-text-black">×</td></tr>
-                    <tr><td class="has-text-black">13</td><td class="has-text-black">DeepSeek-R1</td><td class="has-text-black">46.06</td><td class="has-text-black">19.75</td><td class="has-text-black">16.11</td><td class="has-text-black">10.20</td><td class="has-text-black">✓</td></tr>
-                    <tr><td class="has-text-black">14</td><td class="has-text-black">Gemini-2.5-Flash-Lite</td><td class="has-text-black">44.01</td><td class="has-text-black">26.70</td><td class="has-text-black">7.91</td><td class="has-text-black">9.40</td><td class="has-text-black">×</td></tr>
-                    <tr><td class="has-text-black">15</td><td class="has-text-black">Grok-4</td><td class="has-text-black">43.82</td><td class="has-text-black">31.38</td><td class="has-text-black">4.71</td><td class="has-text-black">7.73</td><td class="has-text-black">×</td></tr>
-                    <tr><td class="has-text-black">16</td><td class="has-text-black">GPT-4o</td><td class="has-text-black">39.93</td><td class="has-text-black">20.35</td><td class="has-text-black">11.28</td><td class="has-text-black">8.30</td><td class="has-text-black">×</td></tr>
-                    <tr><td class="has-text-black">17</td><td class="has-text-black">Qwen-3-14B</td><td class="has-text-black">39.36</td><td class="has-text-black">22.40</td><td class="has-text-black">7.73</td><td class="has-text-black">9.23</td><td class="has-text-black">✓</td></tr>
-                    <tr><td class="has-text-black">18</td><td class="has-text-black">Qwen-3-8B</td><td class="has-text-black">28.37</td><td class="has-text-black">15.13</td><td class="has-text-black">5.84</td><td class="has-text-black">7.40</td><td class="has-text-black">✓</td></tr>
-                    <tr class="has-background-info-light"><td class="has-text-black">-</td><td class="has-text-black"><strong>Youdao-14B</strong></td><td class="has-text-black">46.37</td><td class="has-text-black">28.50</td><td class="has-text-black">9.82</td><td class="has-text-black">8.05</td><td class="has-text-black">✓</td></tr>
-                    <tr class="has-background-info-light"><td class="has-text-black">-</td><td class="has-text-black"><strong>Google-NMT</strong></td><td class="has-text-black">37.10</td><td class="has-text-black">18.96</td><td class="has-text-black">10.12</td><td class="has-text-black">8.02</td><td class="has-text-black">-</td></tr>
-                  </tbody>
-                </table>
+              <div class="leaderboard-wrapper">
+                <!-- Fixed Header -->
+                <div class="leaderboard-header">
+                  <table class="table is-fullwidth">
+                    <thead>
+                       <tr class="has-background-light">
+                         <th class="has-text-black nowrap" style="font-weight: bold; text-align: left;">Rank</th>
+                         <th class="has-text-black" style="font-weight: bold; text-align: center; vertical-align: middle;">Models</th>
+                         <th class="has-text-black" style="font-weight: bold; text-align: center; vertical-align: middle;">Overall</th>
+                         <th class="has-text-black" style="font-weight: bold; text-align: center; vertical-align: middle;">Accuracy</th>
+                         <th class="has-text-black" style="font-weight: bold; text-align: center; vertical-align: middle;">Fluency</th>
+                         <th class="has-text-black" style="font-weight: bold; text-align: center; vertical-align: middle;">Appropriateness</th>
+                         <th class="has-text-black" style="font-weight: bold; text-align: center; vertical-align: middle;">Open-source</th>
+                       </tr>
+                     </thead>
+                  </table>
+                </div>
+                <!-- Scrollable Body -->
+                <div class="leaderboard-body">
+                  <table class="table is-fullwidth is-striped is-hoverable">
+                    <thead>
+                       <tr class="has-background-light">
+                         <th class="has-text-black nowrap" style="font-weight: bold; text-align: left;">Rank</th>
+                         <th class="has-text-black" style="font-weight: bold; text-align: center; vertical-align: middle;">Models</th>
+                         <th class="has-text-black" style="font-weight: bold; text-align: center; vertical-align: middle;">Overall</th>
+                         <th class="has-text-black" style="font-weight: bold; text-align: center; vertical-align: middle;">Accuracy</th>
+                         <th class="has-text-black" style="font-weight: bold; text-align: center; vertical-align: middle;">Fluency</th>
+                         <th class="has-text-black" style="font-weight: bold; text-align: center; vertical-align: middle;">Appropriateness</th>
+                         <th class="has-text-black" style="font-weight: bold; text-align: center; vertical-align: middle;">Open-source</th>
+                       </tr>
+                     </thead>
+                    <tbody>
+                      <tr class="has-background-warning-light"><td class="has-text-black" style="text-align: left; vertical-align: middle;"><span class="tag is-warning is-small">👑 Expert</span></td><td class="has-text-black" style="text-align: center; vertical-align: middle;"><strong>Human Expert</strong></td><td class="has-text-black" style="text-align: center; vertical-align: middle;"><span class="tag is-success is-small">80.16</span></td><td class="has-text-black" style="text-align: center; vertical-align: middle;">49.80</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">15.96</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">14.40</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">-</td></tr>
+                      <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;"><span class="tag is-warning is-small">🥇 1</span></td><td class="has-text-black" style="text-align: center; vertical-align: middle;"><strong>GPT-5-high</strong></td><td class="has-text-black" style="text-align: center; vertical-align: middle;"><span class="tag is-success is-small">76.66</span></td><td class="has-text-black" style="text-align: center; vertical-align: middle;"><strong>48.65</strong></td><td class="has-text-black" style="text-align: center; vertical-align: middle;">15.21</td><td class="has-text-black" style="text-align: center; vertical-align: middle;"><strong>12.80</strong></td><td class="has-text-black" style="text-align: center; vertical-align: middle;">×</td></tr>
+                      <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;"><span class="tag is-light is-small">🥈 2</span></td><td class="has-text-black" style="text-align: center; vertical-align: middle;"><strong>Gemini-2.5-Pro</strong></td><td class="has-text-black" style="text-align: center; vertical-align: middle;"><span class="tag is-info is-small">71.25</span></td><td class="has-text-black" style="text-align: center; vertical-align: middle;">46.68</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">13.14</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">11.43</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">×</td></tr>
+                      <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;"><span class="tag is-light is-small">🥉 3</span></td><td class="has-text-black" style="text-align: center; vertical-align: middle;"><strong>Qwen-3-235B</strong></td><td class="has-text-black" style="text-align: center; vertical-align: middle;"><span class="tag is-info is-small">59.66</span></td><td class="has-text-black" style="text-align: center; vertical-align: middle;">33.15</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">14.96</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">11.55</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">×</td></tr>
+                      <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">4</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">Kimi-K2</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">55.80</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">27.63</td><td class="has-text-black" style="text-align: center; vertical-align: middle;"><strong>16.44</strong></td><td class="has-text-black" style="text-align: center; vertical-align: middle;">11.73</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">×</td></tr>
+                      <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">5</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">o3-high</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">55.57</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">28.78</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">15.79</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">11.00</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">×</td></tr>
+                      <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">6</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">o4-mini-high</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">55.09</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">29.55</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">14.29</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">11.25</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">×</td></tr>
+                      <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">7</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">Claude-4</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">54.03</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">39.38</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">5.98</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">8.68</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">×</td></tr>
+                      <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">8</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">Claude-4-T</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">53.53</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">38.98</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">5.47</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">9.08</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">×</td></tr>
+                      <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">9</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">Qwen-3-235B-T</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">49.97</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">23.20</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">15.54</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">11.23</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">×</td></tr>
+                      <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">10</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">GPT-4.1</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">49.65</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">29.25</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">11.05</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">9.35</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">×</td></tr>
+                      <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">11</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">DeepSeek-V3</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">49.60</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">22.80</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">16.20</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">10.60</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">✓</td></tr>
+                      <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">12</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">Doubao-1.6-T</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">49.51</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">29.30</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">10.11</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">10.10</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">×</td></tr>
+                      <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">13</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">DeepSeek-R1</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">46.06</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">19.75</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">16.11</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">10.20</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">✓</td></tr>
+                      <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">14</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">Gemini-2.5-Flash-Lite</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">44.01</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">26.70</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">7.91</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">9.40</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">×</td></tr>
+                      <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">15</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">Grok-4</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">43.82</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">31.38</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">4.71</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">7.73</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">×</td></tr>
+                      <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">16</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">GPT-4o</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">39.93</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">20.35</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">11.28</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">8.30</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">×</td></tr>
+                      <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">17</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">Qwen-3-14B</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">39.36</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">22.40</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">7.73</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">9.23</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">✓</td></tr>
+                      <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">18</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">Qwen-3-8B</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">28.37</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">15.13</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">5.84</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">7.40</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">✓</td></tr>
+                      <tr class="has-background-info-light"><td class="has-text-black" style="text-align: left; vertical-align: middle;">-</td><td class="has-text-black" style="text-align: center; vertical-align: middle;"><strong>Youdao-14B</strong></td><td class="has-text-black" style="text-align: center; vertical-align: middle;">46.37</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">28.50</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">9.82</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">8.05</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">✓</td></tr>
+                      <tr class="has-background-info-light"><td class="has-text-black" style="text-align: left; vertical-align: middle;">-</td><td class="has-text-black" style="text-align: center; vertical-align: middle;"><strong>Google-NMT</strong></td><td class="has-text-black" style="text-align: center; vertical-align: middle;">37.10</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">18.96</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">10.12</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">8.02</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">-</td></tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
-
               <!-- Language Direction Performance Table -->
               <h3 class="title is-5 mb-3"><i class="fa-solid fa-language"></i> Performance by Translation Direction (zh→en vs en→zh)</h3>
               <div class="table-container" style="overflow-x: auto; max-height: 500px; overflow-y: auto; border: 1px solid #dbdbdb; border-radius: 4px; margin-bottom: 2rem;">
                 <table class="table is-fullwidth is-striped is-hoverable" style="margin-bottom: 0; font-size: 0.85rem;">
                   <thead>
                      <tr class="has-background-light">
-                       <th class="has-text-black nowrap" style="min-width: 150px; font-weight: bold;">Models</th>
-                       <th class="has-text-black" colspan="4" style="text-align: center; font-weight: bold; border-bottom: 1px solid #dbdbdb;">zh→en</th>
-                       <th class="has-text-black" colspan="4" style="text-align: center; font-weight: bold; border-bottom: 1px solid #dbdbdb;">en→zh</th>
-                       <th class="has-text-black nowrap" style="min-width: 80px; font-weight: bold;">Diff</th>
+                       <th class="has-text-black nowrap" style="min-width: 150px; font-weight: bold; text-align: left; vertical-align: middle;">Models</th>
+                       <th class="has-text-black" colspan="4" style="text-align: center; font-weight: bold; border-bottom: 1px solid #dbdbdb; vertical-align: middle;">zh→en</th>
+                       <th class="has-text-black" colspan="4" style="text-align: center; font-weight: bold; border-bottom: 1px solid #dbdbdb; vertical-align: middle;">en→zh</th>
+                       <th class="has-text-black nowrap" style="min-width: 80px; font-weight: bold; text-align: center; vertical-align: middle;">Diff</th>
                      </tr>
                      <tr class="has-background-light">
-                       <th class="has-text-black"></th>
-                       <th class="has-text-black" style="min-width: 70px; font-weight: bold;">Score</th>
-                       <th class="has-text-black" style="min-width: 80px; font-weight: bold;">Accuracy</th>
-                       <th class="has-text-black" style="min-width: 70px; font-weight: bold;">Fluency</th>
-                       <th class="has-text-black" style="min-width: 100px; font-weight: bold;">Appropriateness</th>
-                       <th class="has-text-black" style="min-width: 70px; font-weight: bold;">Score</th>
-                       <th class="has-text-black" style="min-width: 80px; font-weight: bold;">Accuracy</th>
-                       <th class="has-text-black" style="min-width: 70px; font-weight: bold;">Fluency</th>
-                       <th class="has-text-black" style="min-width: 100px; font-weight: bold;">Appropriateness</th>
-                       <th class="has-text-black"></th>
+                       <th class="has-text-black" style="text-align: left; vertical-align: middle;"></th>
+                       <th class="has-text-black" style="min-width: 70px; font-weight: bold; text-align: center; vertical-align: middle;">Score</th>
+                       <th class="has-text-black" style="min-width: 80px; font-weight: bold; text-align: center; vertical-align: middle;">Accuracy</th>
+                       <th class="has-text-black" style="min-width: 70px; font-weight: bold; text-align: center; vertical-align: middle;">Fluency</th>
+                       <th class="has-text-black" style="min-width: 100px; font-weight: bold; text-align: center; vertical-align: middle;">Appropriateness</th>
+                       <th class="has-text-black" style="min-width: 70px; font-weight: bold; text-align: center; vertical-align: middle;">Score</th>
+                       <th class="has-text-black" style="min-width: 80px; font-weight: bold; text-align: center; vertical-align: middle;">Accuracy</th>
+                       <th class="has-text-black" style="min-width: 70px; font-weight: bold; text-align: center; vertical-align: middle;">Fluency</th>
+                       <th class="has-text-black" style="min-width: 100px; font-weight: bold; text-align: center; vertical-align: middle;">Appropriateness</th>
+                       <th class="has-text-black" style="text-align: center; vertical-align: middle;"></th>
                      </tr>
                    </thead>
                   <tbody>
-                    <tr><td class="has-text-black"><strong>GPT-5-high</strong></td><td class="has-text-black">84.49</td><td class="has-text-black">52.35</td><td class="has-text-black">17.24</td><td class="has-text-black">14.90</td><td class="has-text-black">68.83</td><td class="has-text-black">44.95</td><td class="has-text-black">13.18</td><td class="has-text-black">10.70</td><td class="has-text-black">15.66</td></tr>
-                    <tr><td class="has-text-black"><strong>Gemini-2.5-Pro</strong></td><td class="has-text-black">80.22</td><td class="has-text-black">50.25</td><td class="has-text-black">15.82</td><td class="has-text-black">14.15</td><td class="has-text-black">62.26</td><td class="has-text-black">43.10</td><td class="has-text-black">10.46</td><td class="has-text-black">8.70</td><td class="has-text-black">17.96</td></tr>
-                    <tr><td class="has-text-black"><strong>Qwen-3-235B</strong></td><td class="has-text-black">66.15</td><td class="has-text-black">36.35</td><td class="has-text-black">16.80</td><td class="has-text-black">13.00</td><td class="has-text-black">53.17</td><td class="has-text-black">29.95</td><td class="has-text-black">13.12</td><td class="has-text-black">10.10</td><td class="has-text-black">12.98</td></tr>
-                    <tr><td class="has-text-black">Kimi-K2</td><td class="has-text-black">64.12</td><td class="has-text-black">32.90</td><td class="has-text-black">18.32</td><td class="has-text-black">12.90</td><td class="has-text-black">47.46</td><td class="has-text-black">22.35</td><td class="has-text-black">14.56</td><td class="has-text-black">10.55</td><td class="has-text-black">16.66</td></tr>
-                    <tr><td class="has-text-black">o3-high</td><td class="has-text-black">67.18</td><td class="has-text-black">36.10</td><td class="has-text-black">17.98</td><td class="has-text-black">13.10</td><td class="has-text-black">43.95</td><td class="has-text-black">21.45</td><td class="has-text-black">13.60</td><td class="has-text-black">8.90</td><td class="has-text-black">23.23</td></tr>
-                    <tr><td class="has-text-black">o4-mini-high</td><td class="has-text-black">70.34</td><td class="has-text-black">40.10</td><td class="has-text-black">15.94</td><td class="has-text-black">14.30</td><td class="has-text-black">39.84</td><td class="has-text-black">19.00</td><td class="has-text-black">12.64</td><td class="has-text-black">8.20</td><td class="has-text-black">30.50</td></tr>
-                    <tr><td class="has-text-black">Claude-4</td><td class="has-text-black">62.44</td><td class="has-text-black">43.45</td><td class="has-text-black">7.84</td><td class="has-text-black">11.15</td><td class="has-text-black">52.62</td><td class="has-text-black">35.30</td><td class="has-text-black">4.12</td><td class="has-text-black">6.20</td><td class="has-text-black">9.82</td></tr>
-                    <tr><td class="has-text-black">Claude-4-T</td><td class="has-text-black">62.34</td><td class="has-text-black">44.15</td><td class="has-text-black">6.94</td><td class="has-text-black">11.25</td><td class="has-text-black">44.70</td><td class="has-text-black">33.80</td><td class="has-text-black">4.00</td><td class="has-text-black">6.90</td><td class="has-text-black">17.64</td></tr>
-                    <tr><td class="has-text-black">Qwen-3-235b-T</td><td class="has-text-black">58.12</td><td class="has-text-black">28.45</td><td class="has-text-black">15.92</td><td class="has-text-black">13.75</td><td class="has-text-black">41.81</td><td class="has-text-black">17.95</td><td class="has-text-black">15.16</td><td class="has-text-black">8.70</td><td class="has-text-black">16.31</td></tr>
-                    <tr><td class="has-text-black">GPT-4.1</td><td class="has-text-black">65.82</td><td class="has-text-black">39.65</td><td class="has-text-black">13.62</td><td class="has-text-black">12.55</td><td class="has-text-black">33.48</td><td class="has-text-black">18.85</td><td class="has-text-black">8.48</td><td class="has-text-black">6.15</td><td class="has-text-black">32.34</td></tr>
-                    <tr><td class="has-text-black">DeepSeek-V3</td><td class="has-text-black">66.97</td><td class="has-text-black">36.55</td><td class="has-text-black">17.62</td><td class="has-text-black">12.80</td><td class="has-text-black">32.23</td><td class="has-text-black">9.05</td><td class="has-text-black">14.78</td><td class="has-text-black">8.40</td><td class="has-text-black">34.74</td></tr>
-                    <tr><td class="has-text-black">Doubao-1.6-T</td><td class="has-text-black">53.13</td><td class="has-text-black">33.65</td><td class="has-text-black">9.18</td><td class="has-text-black">10.30</td><td class="has-text-black">45.89</td><td class="has-text-black">24.95</td><td class="has-text-black">11.04</td><td class="has-text-black">9.90</td><td class="has-text-black"><em>7.24</em></td></tr>
-                    <tr><td class="has-text-black">DeepSeek-R1</td><td class="has-text-black">58.12</td><td class="has-text-black">28.60</td><td class="has-text-black">16.72</td><td class="has-text-black">12.80</td><td class="has-text-black">34.00</td><td class="has-text-black">10.90</td><td class="has-text-black">15.50</td><td class="has-text-black">7.60</td><td class="has-text-black">24.12</td></tr>
-                    <tr><td class="has-text-black">Gemini-2.5-Flash-Lite</td><td class="has-text-black">62.51</td><td class="has-text-black">38.75</td><td class="has-text-black">11.26</td><td class="has-text-black">12.50</td><td class="has-text-black">25.51</td><td class="has-text-black">14.65</td><td class="has-text-black">4.56</td><td class="has-text-black">6.30</td><td class="has-text-black"><strong>37.00</strong></td></tr>
-                    <tr><td class="has-text-black">Grok-4</td><td class="has-text-black">59.29</td><td class="has-text-black">40.70</td><td class="has-text-black">7.04</td><td class="has-text-black">11.55</td><td class="has-text-black">28.33</td><td class="has-text-black">22.05</td><td class="has-text-black">2.38</td><td class="has-text-black">3.90</td><td class="has-text-black">30.96</td></tr>
-                    <tr><td class="has-text-black">GPT-4o</td><td class="has-text-black">58.13</td><td class="has-text-black">30.95</td><td class="has-text-black">15.88</td><td class="has-text-black">11.30</td><td class="has-text-black">21.73</td><td class="has-text-black">9.75</td><td class="has-text-black">6.68</td><td class="has-text-black">5.30</td><td class="has-text-black">36.40</td></tr>
-                    <tr><td class="has-text-black">Qwen-3-14B</td><td class="has-text-black">47.20</td><td class="has-text-black">26.80</td><td class="has-text-black">9.00</td><td class="has-text-black">11.40</td><td class="has-text-black">31.51</td><td class="has-text-black">18.00</td><td class="has-text-black">6.46</td><td class="has-text-black">7.05</td><td class="has-text-black">15.69</td></tr>
-                    <tr><td class="has-text-black">Google-NMT</td><td class="has-text-black">46.49</td><td class="has-text-black">25.51</td><td class="has-text-black">11.90</td><td class="has-text-black">9.08</td><td class="has-text-black">27.80</td><td class="has-text-black">12.47</td><td class="has-text-black">8.36</td><td class="has-text-black">6.97</td><td class="has-text-black">18.69</td></tr>
-                    <tr><td class="has-text-black">Qwen-3-8B</td><td class="has-text-black">32.95</td><td class="has-text-black">18.70</td><td class="has-text-black">6.20</td><td class="has-text-black">8.05</td><td class="has-text-black">23.78</td><td class="has-text-black">11.55</td><td class="has-text-black">5.48</td><td class="has-text-black">6.75</td><td class="has-text-black">9.17</td></tr>
-                    <tr class="has-background-info-light"><td class="has-text-black"><strong>Average</strong></td><td class="has-text-black">61.37</td><td class="has-text-black">36.00</td><td class="has-text-black">13.22</td><td class="has-text-black">12.15</td><td class="has-text-black">39.94</td><td class="has-text-black">22.11</td><td class="has-text-black">9.71</td><td class="has-text-black">7.75</td><td class="has-text-black">21.43</td></tr>
+                    <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;"><strong>GPT-5-high</strong></td><td class="has-text-black" style="text-align: center; vertical-align: middle;">84.49</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">52.35</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">17.24</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">14.90</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">68.83</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">44.95</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">13.18</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">10.70</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">15.66</td></tr>
+                    <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;"><strong>Gemini-2.5-Pro</strong></td><td class="has-text-black" style="text-align: center; vertical-align: middle;">80.22</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">50.25</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">15.82</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">14.15</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">62.26</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">43.10</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">10.46</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">8.70</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">17.96</td></tr>
+                    <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;"><strong>Qwen-3-235B</strong></td><td class="has-text-black" style="text-align: center; vertical-align: middle;">66.15</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">36.35</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">16.80</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">13.00</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">53.17</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">29.95</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">13.12</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">10.10</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">12.98</td></tr>
+                    <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">Kimi-K2</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">64.12</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">32.90</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">18.32</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">12.90</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">47.46</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">22.35</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">14.56</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">10.55</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">16.66</td></tr>
+                    <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">o3-high</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">67.18</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">36.10</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">17.98</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">13.10</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">43.95</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">21.45</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">13.60</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">8.90</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">23.23</td></tr>
+                    <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">o4-mini-high</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">70.34</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">40.10</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">15.94</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">14.30</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">39.84</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">19.00</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">12.64</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">8.20</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">30.50</td></tr>
+                    <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">Claude-4</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">62.44</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">43.45</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">7.84</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">11.15</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">52.62</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">35.30</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">4.12</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">6.20</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">9.82</td></tr>
+                    <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">Claude-4-T</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">62.34</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">44.15</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">6.94</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">11.25</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">44.70</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">33.80</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">4.00</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">6.90</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">17.64</td></tr>
+                    <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">Qwen-3-235b-T</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">58.12</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">28.45</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">15.92</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">13.75</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">41.81</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">17.95</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">15.16</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">8.70</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">16.31</td></tr>
+                    <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">GPT-4.1</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">65.82</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">39.65</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">13.62</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">12.55</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">33.48</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">18.85</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">8.48</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">6.15</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">32.34</td></tr>
+                    <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">DeepSeek-V3</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">66.97</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">36.55</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">17.62</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">12.80</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">32.23</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">9.05</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">14.78</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">8.40</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">34.74</td></tr>
+                    <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">Doubao-1.6-T</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">53.13</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">33.65</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">9.18</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">10.30</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">45.89</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">24.95</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">11.04</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">9.90</td><td class="has-text-black" style="text-align: center; vertical-align: middle;"><em>7.24</em></td></tr>
+                    <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">DeepSeek-R1</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">58.12</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">28.60</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">16.72</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">12.80</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">34.00</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">10.90</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">15.50</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">7.60</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">24.12</td></tr>
+                    <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">Gemini-2.5-Flash-Lite</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">62.51</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">38.75</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">11.26</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">12.50</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">25.51</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">14.65</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">4.56</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">6.30</td><td class="has-text-black" style="text-align: center; vertical-align: middle;"><strong>37.00</strong></td></tr>
+                    <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">Grok-4</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">59.29</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">40.70</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">7.04</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">11.55</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">28.33</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">22.05</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">2.38</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">3.90</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">30.96</td></tr>
+                    <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">GPT-4o</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">58.13</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">30.95</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">15.88</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">11.30</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">21.73</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">9.75</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">6.68</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">5.30</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">36.40</td></tr>
+                    <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">Qwen-3-14B</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">47.20</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">26.80</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">9.00</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">11.40</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">31.51</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">18.00</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">6.46</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">7.05</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">15.69</td></tr>
+                    <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">Google-NMT</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">46.49</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">25.51</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">11.90</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">9.08</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">27.80</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">12.47</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">8.36</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">6.97</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">18.69</td></tr>
+                    <tr><td class="has-text-black" style="text-align: left; vertical-align: middle;">Qwen-3-8B</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">32.95</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">18.70</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">6.20</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">8.05</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">23.78</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">11.55</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">5.48</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">6.75</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">9.17</td></tr>
+                    <tr class="has-background-info-light"><td class="has-text-black" style="text-align: left; vertical-align: middle;"><strong>Average</strong></td><td class="has-text-black" style="text-align: center; vertical-align: middle;">61.37</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">36.00</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">13.22</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">12.15</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">39.94</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">22.11</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">9.71</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">7.75</td><td class="has-text-black" style="text-align: center; vertical-align: middle;">21.43</td></tr>
                   </tbody>
                 </table>
               </div>
-
               <!-- Academic vs Non-Academic Performance Table -->
               <h3 class="title is-5 mb-3"><i class="fa-solid fa-graduation-cap"></i> Performance by Domain (Academic vs Non-Academic)</h3>
               <div class="table-container" style="overflow-x: auto; max-height: 500px; overflow-y: auto; border: 1px solid #dbdbdb; border-radius: 4px;">
                 <table class="table is-fullwidth is-striped is-hoverable" style="margin-bottom: 0; font-size: 0.75rem;">
                   <thead>
                      <tr class="has-background-light">
-                       <th class="has-text-black nowrap" style="min-width: 120px; font-weight: bold;">Model Name</th>
-                       <th class="has-text-black" colspan="10" style="text-align: center; font-weight: bold; border-bottom: 1px solid #dbdbdb;">Academic Papers</th>
-                       <th class="has-text-black" colspan="8" style="text-align: center; font-weight: bold; border-bottom: 1px solid #dbdbdb;">Non-Academic Tasks</th>
+                       <th class="has-text-black nowrap" style="min-width: 120px; font-weight: bold; text-align: left; vertical-align: middle;">Model Name</th>
+                       <th class="has-text-black" colspan="10" style="text-align: center; vertical-align: middle; font-weight: bold; border-bottom: 1px solid #dbdbdb;">Academic Papers</th>
+                       <th class="has-text-black" colspan="8" style="text-align: center; vertical-align: middle; font-weight: bold; border-bottom: 1px solid #dbdbdb;">Non-Academic Tasks</th>
                      </tr>
                      <tr class="has-background-light">
-                       <th class="has-text-black"></th>
-                       <th class="has-text-black" colspan="2" style="text-align: center; font-weight: bold; border-bottom: 1px solid #dbdbdb;">Overall</th>
-                       <th class="has-text-black" colspan="2" style="text-align: center; font-weight: bold; border-bottom: 1px solid #dbdbdb;">Humanities</th>
-                       <th class="has-text-black" colspan="2" style="text-align: center; font-weight: bold; border-bottom: 1px solid #dbdbdb;">Social Sciences</th>
-                       <th class="has-text-black" colspan="2" style="text-align: center; font-weight: bold; border-bottom: 1px solid #dbdbdb;">Applied Disciplines</th>
-                       <th class="has-text-black" colspan="2" style="text-align: center; font-weight: bold; border-bottom: 1px solid #dbdbdb;">Natural Sciences</th>
-                       <th class="has-text-black" colspan="2" style="text-align: center; font-weight: bold; border-bottom: 1px solid #dbdbdb;">Overall</th>
-                       <th class="has-text-black" colspan="2" style="text-align: center; font-weight: bold; border-bottom: 1px solid #dbdbdb;">Domain-Specific</th>
-                       <th class="has-text-black" colspan="2" style="text-align: center; font-weight: bold; border-bottom: 1px solid #dbdbdb;">Literature & Arts</th>
-                       <th class="has-text-black" colspan="2" style="text-align: center; font-weight: bold; border-bottom: 1px solid #dbdbdb;">News & Information</th>
+                       <th class="has-text-black" style="text-align: left; vertical-align: middle;"></th>
+                       <th class="has-text-black" colspan="2" style="text-align: center; vertical-align: middle; font-weight: bold; border-bottom: 1px solid #dbdbdb;">Overall</th>
+                       <th class="has-text-black" colspan="2" style="text-align: center; vertical-align: middle; font-weight: bold; border-bottom: 1px solid #dbdbdb;">Humanities</th>
+                       <th class="has-text-black" colspan="2" style="text-align: center; vertical-align: middle; font-weight: bold; border-bottom: 1px solid #dbdbdb;">Social Sciences</th>
+                       <th class="has-text-black" colspan="2" style="text-align: center; vertical-align: middle; font-weight: bold; border-bottom: 1px solid #dbdbdb;">Applied Disciplines</th>
+                       <th class="has-text-black" colspan="2" style="text-align: center; vertical-align: middle; font-weight: bold; border-bottom: 1px solid #dbdbdb;">Natural Sciences</th>
+                       <th class="has-text-black" colspan="2" style="text-align: center; vertical-align: middle; font-weight: bold; border-bottom: 1px solid #dbdbdb;">Overall</th>
+                       <th class="has-text-black" colspan="2" style="text-align: center; vertical-align: middle; font-weight: bold; border-bottom: 1px solid #dbdbdb;">Domain-Specific</th>
+                       <th class="has-text-black" colspan="2" style="text-align: center; vertical-align: middle; font-weight: bold; border-bottom: 1px solid #dbdbdb;">Literature & Arts</th>
+                       <th class="has-text-black" colspan="2" style="text-align: center; vertical-align: middle; font-weight: bold; border-bottom: 1px solid #dbdbdb;">News & Information</th>
                      </tr>
                      <tr class="has-background-light">
-                       <th class="has-text-black"></th>
-                       <th class="has-text-black" style="min-width: 40px; font-weight: bold;">Rank</th>
-                       <th class="has-text-black" style="min-width: 50px; font-weight: bold;">Score</th>
-                       <th class="has-text-black" style="min-width: 40px; font-weight: bold;">Rank</th>
-                       <th class="has-text-black" style="min-width: 50px; font-weight: bold;">Score</th>
-                       <th class="has-text-black" style="min-width: 40px; font-weight: bold;">Rank</th>
-                       <th class="has-text-black" style="min-width: 50px; font-weight: bold;">Score</th>
-                       <th class="has-text-black" style="min-width: 40px; font-weight: bold;">Rank</th>
-                       <th class="has-text-black" style="min-width: 50px; font-weight: bold;">Score</th>
-                       <th class="has-text-black" style="min-width: 40px; font-weight: bold;">Rank</th>
-                       <th class="has-text-black" style="min-width: 50px; font-weight: bold;">Score</th>
-                       <th class="has-text-black" style="min-width: 40px; font-weight: bold;">Rank</th>
-                       <th class="has-text-black" style="min-width: 50px; font-weight: bold;">Score</th>
-                       <th class="has-text-black" style="min-width: 40px; font-weight: bold;">Rank</th>
-                       <th class="has-text-black" style="min-width: 50px; font-weight: bold;">Score</th>
-                       <th class="has-text-black" style="min-width: 40px; font-weight: bold;">Rank</th>
-                       <th class="has-text-black" style="min-width: 50px; font-weight: bold;">Score</th>
-                       <th class="has-text-black" style="min-width: 40px; font-weight: bold;">Rank</th>
-                       <th class="has-text-black" style="min-width: 50px; font-weight: bold;">Score</th>
+                       <th class="has-text-black" style="text-align: left; vertical-align: middle;"></th>
+                       <th class="has-text-black" style="min-width: 40px; font-weight: bold; text-align: center; vertical-align: middle;">Rank</th>
+                       <th class="has-text-black" style="min-width: 50px; font-weight: bold; text-align: center; vertical-align: middle;">Score</th>
+                       <th class="has-text-black" style="min-width: 40px; font-weight: bold; text-align: center; vertical-align: middle;">Rank</th>
+                       <th class="has-text-black" style="min-width: 50px; font-weight: bold; text-align: center; vertical-align: middle;">Score</th>
+                       <th class="has-text-black" style="min-width: 40px; font-weight: bold; text-align: center; vertical-align: middle;">Rank</th>
+                       <th class="has-text-black" style="min-width: 50px; font-weight: bold; text-align: center; vertical-align: middle;">Score</th>
+                       <th class="has-text-black" style="min-width: 40px; font-weight: bold; text-align: center; vertical-align: middle;">Rank</th>
+                       <th class="has-text-black" style="min-width: 50px; font-weight: bold; text-align: center; vertical-align: middle;">Score</th>
+                       <th class="has-text-black" style="min-width: 40px; font-weight: bold; text-align: center; vertical-align: middle;">Rank</th>
+                       <th class="has-text-black" style="min-width: 50px; font-weight: bold; text-align: center; vertical-align: middle;">Score</th>
+                       <th class="has-text-black" style="min-width: 40px; font-weight: bold; text-align: center; vertical-align: middle;">Rank</th>
+                       <th class="has-text-black" style="min-width: 50px; font-weight: bold; text-align: center; vertical-align: middle;">Score</th>
+                       <th class="has-text-black" style="min-width: 40px; font-weight: bold; text-align: center; vertical-align: middle;">Rank</th>
+                       <th class="has-text-black" style="min-width: 50px; font-weight: bold; text-align: center; vertical-align: middle;">Score</th>
+                       <th class="has-text-black" style="min-width: 40px; font-weight: bold; text-align: center; vertical-align: middle;">Rank</th>
+                       <th class="has-text-black" style="min-width: 50px; font-weight: bold; text-align: center; vertical-align: middle;">Score</th>
+                       <th class="has-text-black" style="min-width: 40px; font-weight: bold; text-align: center; vertical-align: middle;">Rank</th>
+                       <th class="has-text-black" style="min-width: 50px; font-weight: bold; text-align: center; vertical-align: middle;">Score</th>
                      </tr>
                    </thead>
                   <tbody>
@@ -340,7 +348,6 @@
         </div>
       </div>
     </section>
-    
     <!-- Data Distribution Section -->
     <div class="section" id="overview">
       <div class="container">
@@ -373,7 +380,6 @@
               </div>
             </div>
           </div>
-          
           <!-- Benchmark Overview Card -->
           <div class="column is-half">
             <div class="box card-content" data-card="overview">
@@ -385,9 +391,9 @@
                       <div class="box has-background-light">
                         <h4 class="title is-5 has-text-centered"><i class="fa-solid fa-database"></i> DiscoX Benchmark</h4>
                         <ul>
-                          <li>Contains texts at discourse-level and expert-level</li>
-                          <li>200 Chinese and English texts, each over 1,500 words</li>
-                          <li>Covering genres such as news, academic papers, and literary works</li>
+                          <li>Comprises 200 discourse-level and expert-level texts in Chinese and English</li>
+                          <li>Features texts that are each over 1,500 words or characters</li>
+                          <li>Covers diverse genres, including news, academic papers, and literary works</li>
                         </ul>
                       </div>
                     </div>
@@ -395,8 +401,9 @@
                       <div class="box has-background-light">
                         <h4 class="title is-5 has-text-centered"><i class="fa-solid fa-chart-line"></i> Metric-S</h4>
                         <ul>
-                          <li>Evaluating in 3 dimensions: Accuracy, Fluency, and Appropriateness</li>
-                          <li>With strong explainability</li>
+                          <li>Provides evaluation across three dimensions: Accuracy, Fluency, and Appropriateness</li>
+                          <li>Calculates by error number and error severity</li>
+                          <li>Offers strong explainability</li>
                         </ul>
                       </div>
                     </div>
@@ -408,9 +415,9 @@
                       <div class="box has-background-light">
                         <h4 class="title is-5 has-text-centered"><i class="fa-solid fa-database"></i> DiscoX Benchmark</h4>
                         <ul>
-                          <li>Contains texts at discourse-level and expert-level</li>
-                          <li>200 Chinese and English texts, each over 1,500 words</li>
-                          <li>Covering genres such as news, academic papers, and literary works</li>
+                          <li>Comprises 200 discourse-level and expert-level texts in Chinese and English</li>
+                          <li>Features texts that are each over 1,500 words or characters</li>
+                          <li>Covers diverse genres, including news, academic papers, and literary works</li>
                         </ul>
                       </div>
                     </div>
@@ -418,8 +425,9 @@
                       <div class="box has-background-light">
                         <h4 class="title is-5 has-text-centered"><i class="fa-solid fa-chart-line"></i> Metric-S</h4>
                         <ul>
-                          <li>Evaluating in 3 dimensions: Accuracy, Fluency, and Appropriateness</li>
-                          <li>With strong explainability</li>
+                          <li>Provides evaluation across three dimensions: Accuracy, Fluency, and Appropriateness</li>
+                          <li>Calculates by error number and error severity</li>
+                          <li>Offers strong explainability</li>
                         </ul>
                       </div>
                     </div>
@@ -432,15 +440,13 @@
         </div>
       </div>
     </div>
-
     <!-- Data Description Section -->
     <section class="section py-4" id="data-description" height="80%">
       <div class="container">
         <div class="box mb-4 data-description-box">
           <h2 class="title is-3 has-text-centered has-text-black mb-4"><span><i class="fa-solid fa-chart-pie"></i> Data Description & Distribution</span></h2>
           <div class="content">
-            <p class="has-text-left mb-3">DiscoX Bench invited a total of over 130 Vertical Domain experts from various fields (including experts with more than 3 years of professional experience and master's/doctoral students from world-class Universities to construct the evaluation dataset. The texts in the dataset are required to be over 1,500 words, sourced from real-world industry and academic scenarios. They are logically coherent and of high quality, designed to challenge the upper limits of current large models' translation capabilities.</p>
-            
+            <p class="has-text-left mb-3">DiscoX Bench invited a total of over 130 Vertical Domain experts from various fields (including experts with more than 3 years of professional experience and master's/doctoral students from world-class Universities to construct the evaluation dataset.) The texts in the dataset are required to be over 1,500 words, sourced from real-world industry and academic scenarios. They are logically coherent and of high quality, designed to challenge the upper limits of current large models' translation capabilities.</p>
             <!-- Data Distribution Table and Chart - Side by Side Layout -->
             <div class="columns is-variable is-6">
               <!-- Left Column: Table -->
@@ -493,7 +499,6 @@
                   </table>
                 </div>
               </div>
-              
               <!-- Right Column: Chart -->
               <div class="column is-half">
                 <div class="has-text-centered" style="height: 100%; display: flex; align-items: center; justify-content: center;">
@@ -508,14 +513,12 @@
         </div>
       </div>
     </section>
-    
     <section class="section" id="data-construction">
     <!-- Data Construction Process -->
         <div class="box mb-5 data-construction-box">
           <h2 class="title is-3 has-text-centered has-text-black mb-5"><span><i class="fa-solid fa-database"></i> Data Construction Process</span></h2>
           <div class="content">
             <p class="has-text-left mb-4">A "one round of Design, two rounds of Quality Assurance" is adopted: Vertical Domain experts designed tasks based on terminology or mistranslated words, and a case was validated only if two randomly selected models (from a pool of five) both failed the translation. This rigorous process filtered 665 initial tasks down to 200 finalized cases.</p>
-            
             <!-- Pipeline Image Placeholder -->
             <div class="has-text-centered mb-5">
               <img src="figure/benchmarkpipelinev999-1.png" alt="Data Construction Pipeline" class="zoomable-image" style="width: 80%; max-width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); cursor: pointer;">
@@ -523,19 +526,16 @@
           </div>
         </div>
     </section>
-    
     <!-- Evaluation Process by Metric-S Section -->
     <section class="section" id="evaluation-process">
         <div class="box mb-5 data-construction-box">
           <h2 class="title is-3 has-text-centered has-text-black mb-5"><span><i class="fa-solid fa-cogs"></i> Evaluation Process by Metric-S</span></h2>
           <div class="content">
             <p class="has-text-left mb-4">To precisely evaluate the capabilities of AI translation, we have designed an automated scoring framework: Metric-S. It systematically assesses a translation through the following three core steps:</p>
-            
             <!-- Pipeline Image Placeholder -->
              <div class="has-text-centered mb-5">
                <img src="figure/metric_pipelinev3-1.png" alt="Metric-S Evaluation Pipeline" class="zoomable-image" style="width: 80%; max-width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); cursor: pointer;">
              </div>
-            
             <div class="columns is-multiline">
               <!-- Setup Step -->
               <div class="column is-12">
@@ -546,33 +546,30 @@
                   </div>
                 </div>
               </div>
-              
               <!-- Step 1 -->
               <div class="column is-4">
                 <div class="card has-shadow" style="border-radius: 8px; height: 100%; background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
                   <div class="card-content p-4">
-                    <h4 class="title is-5 mb-3" style="font-weight: bold; color: #48c774;"><i class="fa-solid fa-search"></i> Step 1</h4>
-                    <p>The Metric-S evaluation system is used to comprehensively assess the translated texts based on accuracy (e.g., mistranslations, omissions), fluency (e.g., grammar, logic), and appropriateness (e.g., style, tone). This initial step aims to generate a complete "diagnostic output" that identifies all potential issues.</p>
+                    <h4 class="title is-5" style="font-weight: bold; color: #48c774; margin-bottom: 0.5rem;"><i class="fa-solid fa-search"></i> Step 1</h4>
+                    <p style="margin-bottom: 0;">The Metric-S evaluation system is used to comprehensively assess the translated texts based on accuracy (e.g., mistranslations, omissions), fluency (e.g., grammar, logic), and appropriateness (e.g., style, tone). This initial step aims to generate a complete "diagnostic output" that identifies all potential issues.</p>
                   </div>
                 </div>
               </div>
-              
               <!-- Step 2 -->
               <div class="column is-4">
                 <div class="card has-shadow" style="border-radius: 8px; height: 100%; background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
                   <div class="card-content p-4">
-                    <h4 class="title is-5 mb-3" style="font-weight: bold; color: #ff9f43;"><i class="fa-solid fa-layer-group"></i> Step 2</h4>
-                    <p>The process moves to a De-duplication phase to refine the scoring mechanism. Its core task is to automatically identify and merge duplicate error records, ensuring that each unique translation error is counted only once. This de-duplication process lays the groundwork for fair and accurate scoring.</p>
+                    <h4 class="title is-5" style="font-weight: bold; color: #ff9f43;"><i class="fa-solid fa-layer-group"></i> Step 2</h4>
+                    <p style="margin-bottom: 0;">The process moves to a De-duplication phase to refine the scoring mechanism. Its core task is to automatically identify and merge duplicate error records, ensuring that each unique translation error is counted only once. This de-duplication process lays the groundwork for fair and accurate scoring.</p>
                   </div>
                 </div>
               </div>
-              
               <!-- Step 3 -->
               <div class="column is-4">
                 <div class="card has-shadow" style="border-radius: 8px; height: 100%; background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
                   <div class="card-content p-4">
-                    <h4 class="title is-5 mb-3" style="font-weight: bold; color: #e74c3c;"><i class="fa-solid fa-calculator"></i> Step 3</h4>
-                    <p>The system applies precise scoring to convert the verified error list into a final score. Points are deducted from a perfect score of 100 based on the type and severity of each error. The result is a single, comprehensive score that quantifies the model's overall translation quality.</p>
+                    <h4 class="title is-5" style="font-weight: bold; color: #e74c3c; margin-bottom: 0.5rem;"><i class="fa-solid fa-calculator"></i> Step 3</h4>
+                    <p style="margin-bottom: 0;">The system applies precise scoring to convert the verified error list into a final score. Points are deducted from a perfect score of 100 based on the type and severity of each error. The result is a single, comprehensive score that quantifies the model's overall translation quality.</p>
                   </div>
                 </div>
               </div>
@@ -580,7 +577,6 @@
           </div>
         </div>
     </section>
-    
     <section class="section" id="key-findings">
       <div class="has-text-centered"> 
          <h3 class="title is-3"> 
@@ -590,11 +586,10 @@
       <div class="container">
         <!-- Key Finding 1 -->
         <div class="box finding-box mb-5">
-          <h3 class="title is-3 has-text-primary mb-4 has-text-centered"><span class="finding-number">1</span> Beyond a Single Score: Analyzing LLM Performance Variations Across Dimensions</h3>
+          <h3 class="title is-3 has-text-primary mb-4 has-text-centered"><span class="finding-number">1</span> Beyond a Single Score: Analyzing LLM Performance Across Dimensions</h3>
           <div class="content finding-content has-text-centered mb-5">
             <p class="has-text-left mb-4">The models' performance is not balanced across the three dimensions (Accuracy, Fluency and Appropriateness). For example, Claude-4 performs well on Accuracy but poorly on Fluency-its translations are semantically correct but not smooth or natural. Conversely, DeepSeek-V3 performs well on Fluency but poorly on Accuracy.</p>
           </div>
-          
           <!-- Case Study Table -->
           <div class="columns is-multiline is-variable is-4">
             <!-- Prompt Card -->
@@ -617,7 +612,6 @@
                 </div>
               </div>
             </div>
-            
             <!-- GPT-5-HIGH Card -->
             <div class="column is-3">
               <div class="card case-card">
@@ -634,7 +628,6 @@
                 </div>
               </div>
             </div>
-            
             <!-- Claude-4.0 Card -->
             <div class="column is-3">
               <div class="card case-card">
@@ -651,7 +644,6 @@
                 </div>
               </div>
             </div>
-            
             <!-- DeepSeek-V3 Card -->
             <div class="column is-3">
               <div class="card case-card">
@@ -670,14 +662,12 @@
             </div>
           </div>
         </div>
-        
         <!-- Key Finding 2 -->
         <div class="box finding-box mb-5">
           <h3 class="title is-4 has-text-primary mb-5 has-text-centered"><span class="finding-number">2</span> Asymmetry in Translation Directionality: LLM Better at Chinese-to-English than English-to-Chinese</h3>
           <div class="content finding-content has-text-centered mb-3">
             <p class="has-text-left mb-2">The case reveals a significant performance disparity, with models performing considerably worse when translating from English to Chinese compared to the reverse direction. For instance, even the top-ranked GPT-5-high shows a noticeable quality gap between its English-to-Chinese output and the translations produced by professional human experts.</p>
           </div>
-          
           <!-- Case Study Table -->
           <div class="columns is-multiline is-variable is-4">
             <!-- Prompt Card -->
@@ -700,7 +690,6 @@
                 </div>
               </div>
             </div>
-            
             <!-- GPT-5-HIGH Card -->
             <div class="column is-3">
               <div class="card case-card">
@@ -717,7 +706,6 @@
                 </div>
               </div>
             </div>
-            
             <!-- Judge Output Card -->
             <div class="column is-3">
               <div class="card case-card">
@@ -725,7 +713,7 @@
                   <div class="card-main-content">
                     <h4 class="title is-5 has-text-primary mb-2">Accuracy and Fluency Problems</h4>
                     <div class="content mb-2">
-                      <p class="has-text-grey-dark">Excerpt from evaluation analysis identifying translation issues and accuracy problems...</p>
+                      <p class="has-text-grey-dark">Excerpt from evaluation analysis identifying translation issues, accuracy and fluency problems....</p>
                     </div>
                   </div>
                   <div class="card-button-area">
@@ -734,13 +722,12 @@
                 </div>
               </div>
             </div>
-            
             <!-- Human Translator Card -->
             <div class="column is-3">
               <div class="card case-card">
                 <div class="card-content">
                   <div class="card-main-content">
-                    <h4 class="title is-5 has-text-primary mb-2">Reference Response</h4>
+                    <h4 class="title is-5 has-text-primary mb-2">Reference</h4>
                     <div class="subtitle is-6 has-text-grey mb-2">Human Translator</div>
                     <div class="content mb-2">
                       <p class="has-text-grey-dark">Professional human translation serving as the reference standard...</p>
@@ -754,14 +741,12 @@
             </div>
           </div>
         </div>
-        
         <!-- Key Finding 3 -->
         <div class="box finding-box mb-5">
-          <h3 class="title is-3 has-text-primary mb-2 has-text-centered"><span class="finding-number">3</span> The Performance Gap: Thinking Models Lag Behind Non-thinking LLMs</h3>
+          <h3 class="title is-3 has-text-primary mb-2 has-text-centered"><span class="finding-number">3</span> The Performance Gap: Thinking LLMs Lag Behind Non-thinking LLMs</h3>
           <div class="content finding-content has-text-centered mb-3">
             <p class="has-text-left mb-2">The study finds that thinking models generally underperform in non-thinking translation tasks. Thinking models are more prone to omitting information or providing summarized translations, which may lead to information loss.</p>
           </div>
-          
           <!-- Case Study Table -->
           <div class="columns is-multiline is-variable is-4">
             <!-- Prompt Card -->
@@ -784,7 +769,6 @@
                 </div>
               </div>
             </div>
-            
             <!-- Non-thinking Response Card -->
             <div class="column is-4">
               <div class="card case-card">
@@ -801,7 +785,6 @@
                 </div>
               </div>
             </div>
-            
             <!-- Thinking Response Card -->
             <div class="column is-4">
               <div class="card case-card">
@@ -820,17 +803,14 @@
             </div>
           </div>
         </div>
-        
       </div>
     </section>
-    
     <!-- Metric-S Fidelity Validation Section -->
     <section class="section" id="metric-s-validation">
         <div class="box mb-5 data-construction-box">
           <h2 class="title is-3 has-text-centered has-text-black mb-5"><span><i class="fa-solid fa-chart-line"></i> Metric-S Fidelity Validation</span></h2>
           <div class="content">
             <p class="has-text-left mb-4">Our proposed new evaluation metric, Metric-S, achieves 70.30% consistency with human expert judgments, significantly outperforming existing methods. Further ablation studies demonstrate that its superior performance stems from our meticulously designed multi-dimensional, multi-judge collaborative framework, as any simplification of it leads to a drop in evaluation accuracy.</p>
-            
             <div class="validation-tables">
               <div class="val-table-wrap">
                 <table class="val-table">
@@ -916,7 +896,6 @@
         </div>
     </section>
   </main>
-
   <!-- Footer -->
   <footer class="footer has-background-white">
     <div class="content has-text-centered">
@@ -928,7 +907,6 @@
       </p>
     </div>
   </footer>
-
   <!-- Modals -->
   <!-- Prompt Modal -->
   <div id="promptModal" class="modal">
@@ -938,16 +916,14 @@
       <div class="modal-text">"全世界一共研究出13个番茄种的基因组，我们现在掌握11个。"新疆农业科学院副院长、研究员、加工番茄生物育种创新团队学科带头人余庆辉说。据介绍，该研究利用第三代单分子实时测序技术、全基因组光学图谱技术和高通量染色体构象捕获测序技术对11个番茄种进行基因测序组装，组装出11个染色体水平高质量基因组，打开了番茄属遗传资源领域研究的宝库，使新疆从种植大区一跃成为世界番茄遗传资源富集区。</div>
     </div>
   </div>
-
   <!-- GPT-5 Response Modal -->
   <div id="gpt5Modal" class="modal">
     <div class="modal-content">
       <button class="modal-close" onclick="closeModal('gpt5Modal')">&times;</button>
       <h3 class="modal-title">GPT-5-HIGH Response</h3>
-      <div class="modal-text">Globally, the genomes of 13 tomato species have been characterized; we now have 11 of them," said Yu Qinghui, vice president and researcher at the Xinjiang Academy of Agricultural Sciences, and discipline lead of the processing tomato bio-breeding innovation team. Using third-generation single-molecule real-time (SMRT) sequencing, whole-genome optical mapping, and high-throughput chromosome conformation capture (Hi-C) sequencing, the team sequenced and assembled 11 tomato species, producing 11 high-quality, chromosome-level genomes. This has opened a treasure trove for research into the genetic resources of the tomato genus, vaulting Xinjiang from a major growing region to a world-leading reservoir of tomato genetic resources.</div>
+      <div class="modal-text">"Globally, the genomes of 13 tomato species have been characterized; we now have 11 of them," said Yu Qinghui, vice president and researcher at the Xinjiang Academy of Agricultural Sciences, and discipline lead of the processing tomato bio-breeding innovation team. Using third-generation single-molecule real-time (SMRT) sequencing, whole-genome optical mapping, and high-throughput chromosome conformation capture (Hi-C) sequencing, the team sequenced and assembled 11 tomato species, producing 11 high-quality, chromosome-level genomes. This has opened a treasure trove for research into the genetic resources of the tomato genus, vaulting Xinjiang from a major growing region to a world-leading reservoir of tomato genetic resources.</div>
     </div>
   </div>
-
   <!-- Claude Response Modal -->
   <div id="claudeModal" class="modal">
     <div class="modal-content">
@@ -956,7 +932,6 @@
       <div class="modal-text">"Worldwide, 13 tomato species genomes have been researched in total, and we now possess 11 of them," said Yu Qinghui, Deputy Director of Xinjiang Academy of Agricultural Sciences, Researcher, and Academic Leader of the Processing Tomato Biological Breeding Innovation Team. According to the introduction, this research used third-generation single-molecule real-time sequencing technology, whole-genome optical mapping technology, and high-throughput chromosome conformation capture sequencing technology to conduct gene sequencing and assembly of 11 tomato species, assembling 11 high-quality genomes at the chromosome level, opening up a treasure trove of research in the field of tomato genetic resources, transforming Xinjiang from a major planting region into a world-rich area for tomato genetic resources.</div>
     </div>
   </div>
-
   <!-- DeepSeek Response Modal -->
   <div id="deepseekModal" class="modal">
     <div class="modal-content">
@@ -965,7 +940,6 @@
       <div class="modal-text">"Out of the 13 tomato species genomes researched worldwide, we now have mastered 11," said Yu Qinghui, Deputy Director of the Xinjiang Academy of Agricultural Sciences, researcher, and leader of the Processing Tomato Biological Breeding Innovation Team. According to reports, the study utilized third-generation single-molecule real-time sequencing technology, whole-genome optical mapping, and high-throughput chromosome conformation capture sequencing to assemble the genomes of 11 tomato species, resulting in 11 high-quality chromosome-level genomes. This breakthrough unlocked the treasure trove of genetic resources in the tomato genus, elevating Xinjiang from a major planting region to a global hub for tomato genetic resources.</div>
     </div>
   </div>
-
   <!-- Finding 2 Modals -->
   <!-- Prompt Modal 2 -->
   <div id="promptModal2" class="modal">
@@ -976,7 +950,6 @@
       </div>
     </div>
   </div>
-
   <!-- GPT-5 Response Modal 2 -->
   <div id="gpt5Modal2" class="modal">
     <div class="modal-content">
@@ -986,24 +959,30 @@
       </div>
     </div>
   </div>
-
   <!-- Claude Response Modal 2 -->
   <div id="judgeModal2" class="modal">
     <div class="modal-content">
       <button class="modal-close" onclick="closeModal('judgeModal2')">&times;</button>
       <h3 class="modal-title">Judge Output - Humanities EN-CN</h3>
       <div class="modal-text">
-          <strong>问题序号: 2</strong><br>
-          <strong>问题分析:</strong> 原文中的"strict mother has kind children, while kind mother has brute children"是对韩非子思想的英文转述。译文将其翻译为更为通俗的"严母出孝子，慈母多败儿"。考点要求翻译为更贴近《韩非子·显学》原文"慈母有败子，而严家无格虏"的"严家无悍虏，而慈母有败子"。虽然译文与考点推荐译文意思相近，但译文使用的是一个民间俗语，而考点要求的是更具经典出处的表述，因此译文不够精确，未满足考点要求。<br>
-          <strong>判断结果:</strong> 错误<br>
-          <strong>问题序号: 1</strong><br>
-          <strong>问题类型:</strong> 语言流畅度<br>
-          <strong>问题分析:</strong> 原文开头为 "The same to Hanfeizi."，译文为"韩非子的看法亦然。"。此处的"亦然"虽然意思正确，但作为段落开头，与上文衔接略显生硬和书面化，不够自然。更通顺的表达可以是"韩非子也是如此"或"韩非子也持相同看法"。<br>
-          <strong>问题严重程度:</strong> 有问题
+          <pre style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto; white-space: pre-wrap; font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.4;">
+{
+  "问题序号": "1",
+  "问题类型": "错译",
+  "问题分析": "原文中的\"strict mother has kind children, while kind mother has brute children\"是对韩非子思想的英文转述。译文将其翻译为更为通俗的\"严母出孝子，慈母多败儿\"。考点要求翻译为更贴近《韩非子·显学》原文\"慈母有败子，而严家无格虏\"的\"严家无悍虏，而慈母有败子\"。虽然译文与考点推荐译文意思相近，但译文使用的是一个民间俗语，而考点要求的是更具经典出处的表述，因此译文不够精确，未满足考点要求。",
+  "问题严重程度": "major"
+},
+
+{
+  "问题序号": "2",
+  "问题类型": "语言流畅度",
+  "问题分析": "原文开头为 \"The same to Hanfeizi.\"，译文为\"韩非子的看法亦然。\"。此处的\"亦然\"虽然意思正确，但作为段落开头，与上文衔接略显生硬和书面化，不够自然。更通顺的表达可以是\"韩非子也是如此\"或\"韩非子也持相同看法\"。",
+  "问题严重程度": "minor"
+}
+          </pre>
       </div>
     </div>
   </div>
-
   <!-- DeepSeek Response Modal 2 -->
   <div id="referenceModal2" class="modal">
     <div class="modal-content">
@@ -1013,7 +992,6 @@
       </div>
     </div>
   </div>
-
   <!-- Finding 3 Modals -->
   <!-- Prompt Modal 3 -->
   <div id="promptModal3" class="modal">
@@ -1025,7 +1003,6 @@
       </div>
     </div>
   </div>
-
   <!-- Non-thinking Response Modal 3 -->
   <div id="nonthinkingModal3" class="modal">
     <div class="modal-content">
@@ -1036,7 +1013,6 @@
       </div>
     </div>
   </div>
-
   <!-- Thinking Response Modal 3 -->
   <div id="thinkingModal3" class="modal">
     <div class="modal-content">
@@ -1048,7 +1024,6 @@
       </div>
     </div>
   </div>
-
   <script src="script.js" defer></script>
 </body>
 </html>
